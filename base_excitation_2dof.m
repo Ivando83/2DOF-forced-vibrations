@@ -2,6 +2,8 @@ clear all
 close all
 clc
 
+
+%imagine a car moving on a uneven road and assume the excitations from the road to the base of the car to be harmonic
 %system parameters
 %damping of front wheel
 c_f = 100;
@@ -34,7 +36,7 @@ base_excitation = 0.1;%[m]
 %speed of the car
 v = 14;%[m/s], about 50 km/hr
 
-%length of excitation/bump of the road
+%length of excitation/length of the bump of the road
 l_excitation = 5;%[m]
 
 %frequency of the harmonic force
@@ -78,6 +80,7 @@ xlabel('Time[s]')
 ylabel('Pitch[radians]')
 
 
+%frequency response of the system
 %analytical solution to calculate the amplitude of the particular solution
 %(steady state motion)
 %frequency response curve to be plotted thus a range of frequencies to be
@@ -154,7 +157,7 @@ speed_car_res_mode(1) = speed_car(indx1);
 eigen_angular_freq(1) = omega_excitation(indx1);
 
 %speed of car for second resonance mode 
-[value,indx2] = max(p_amp);
+[~,indx2] = max(p_amp);
 speed_car_res_mode(2) = speed_car(indx2);
 %1st eigen angular frequency (natural angular frequency)
 eigen_angular_freq(2) = omega_excitation(indx2);
