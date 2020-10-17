@@ -8,7 +8,7 @@ Code for computing the forced vibration characteristics of a 2 degree of freedom
 3). Symbolic approach where the equations of motion (2nd order non-homogeneous ODE) is solved symbollically. This approach is too slow compared to the other two.
 
 Explanation of the scripts in the repository:
-`two_dof_forced_excitation.m` is the script for the case of a frequency independent harmonic excitation force acting on the 2 DOF car model. The script has the option of changing the solver type i.e. is the solution obtained via analytical solver, a numerical solver or a symbolic solver. For the numerical `ode45` solver, a state function (`state_function.m`) is defined which contains the state space representation of the system with external force excitation.
+`two_dof_forced_excitation.m` is the script for the case of a frequency independent harmonic excitation force acting on the 2 DOF car model and calculates the bounce and pitch amplitudes and velocities vs time. The script has the option of changing the solver type i.e. is the solution obtained via analytical solver, a numerical solver or a symbolic solver. For the numerical `ode45` solver, a state function (`state_function.m`) is defined which contains the state space representation of the system with external force excitation.
 
 `two_dof_frequency_response.m` is the script which takes a frequency range for the harmonic excitation and develops a frequency response function for the system which would be helpful in computing the eigenmodes of the system. The pitch and bounce motions are seperately plotted against the varying angular frequency.
 
