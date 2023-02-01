@@ -35,7 +35,7 @@ force = 2000;%[N]
 omega = 0:0.1:50;%[rad/s]
 
 %eccentricity of the force from the COM of the mass
-l_force = 1.6;%[m]
+l_force = 1.6;%[m] how to get this value?
 
 %sampling rate
 fs = 100;
